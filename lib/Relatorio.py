@@ -29,7 +29,7 @@ class Relatorio:
             self.relatorio[dia].append(relato)
         try:
             with open(self.caminho_arquivo, 'w') as arquivo_relatorio:
-                arquivo_relatorio.write(json.dumps(self.relatorio))
+                arquivo_relatorio.write(json.dumps(self.relatorio, sort_keys=True))
         except Exception:
             raise
 
